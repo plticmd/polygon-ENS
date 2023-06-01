@@ -282,7 +282,7 @@ const fetchMints = async () => {
 		return (
 			<div className="connect-wallet-container">
 				{/* <p>Please connect to the Polygon Mumbai Testnet</p> */}
-				<p>Please switch to Polygon Mumbai Testnet</p>
+				<p>Please switch Polygon Mumbai Testnet</p>
 				{/* 今ボタンで switchNetwork 関数を呼び出します。 */}
 				<button className='cta-button mint-button' onClick={switchNetwork}>Click here to switch</button>
 			</div>
