@@ -83,6 +83,7 @@ header{
   flex-direction: column;
   margin: auto;
   max-width: 550px;
+  
 }
 
 .connect-wallet-container img {
@@ -153,7 +154,7 @@ header{
 }
 
 .footer-text {
-  color: white;
+  color: rgba(197, 195, 195, 0.855);
   font-size: 16px;
   font-weight: bold;
 }
@@ -249,7 +250,7 @@ input:focus {
 }
 
 .link{
-  color: black;
+  color: rgb(8, 8, 8);
   text-decoration: none;
 }
 

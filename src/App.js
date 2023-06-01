@@ -9,10 +9,10 @@ import ethLogo from './assets/ethlogo.png';
 import { networks } from './utils/networks';
 
 // Constants
-const TWITTER_HANDLE = '_UNCHAIN';
+const TWITTER_HANDLE = 'voyager_cr';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
-const tld = ".ninja";
+const tld = ".Apt";
 //"YOUR_CONTRACT_ADDRESS_HERE"
 const CONTRACT_ADDRESS = "0x57BD9C3BE3e28d8084B7e462e69a611be117837E";
 
@@ -134,9 +134,7 @@ const App = () => {
 
 const mintDomain = async () => {
 	// ドメインがnullのときrunしません。
-	if (!domain) {
-		return;
-	}
+	if (!domain) {return}
 	// ドメインが3文字に満たない、短すぎる場合にアラートを出します。
 	if (domain.length < 3) {
 		alert('Domain must be at least 3 characters long');
@@ -161,8 +159,7 @@ const mintDomain = async () => {
 
 			console.log("Going to pop wallet now to pay gas...");
 			  let tx = await contract.register(domain, {
-				value: ethers.utils.parseEther(price),
-			});
+				value: ethers.utils.parseEther(price)});
 			// ミントされるまでトランザクションを待ちます。
 			const receipt = await tx.wait();
 
@@ -172,7 +169,7 @@ const mintDomain = async () => {
 					"Domain minted! https://mumbai.polygonscan.com/tx/" + tx.hash
 				);
 
-				// domain,recordをセットします。
+				// domainのrecordをセットします。
 				tx = await contract.setRecord(domain, record);
 				await tx.wait();
 
@@ -255,6 +252,7 @@ const fetchMints = async () => {
 
    // まだウォレットに接続されていない場合のレンダリングです。
    const renderNotConnectedContainer = () => (
+	
 	<div className = "connect-wallet-container">
 		<img
 		  src = "https://media.giphy.com/media/yy6hXyy2DsM5W/giphy-downsized-large.gif"
@@ -265,19 +263,21 @@ const fetchMints = async () => {
 		/>
 		{/* Connect Wallet ボタンが押されたときのみ connectWallet関数 を呼び出します。 */}
 		{/* <button className = "cta-button connect-wallet-button"> */}
+		
 		<button 
 			onClick={connectWallet}
 			className = "cta-button connect-wallet-button"
 		>
-			Connect Wallet
+			<p>Clutch Switch Engage🔜</p> Connect Wallet 
 		</button>
 	</div>
    );
 
    // ドメインネームとデータの入力フォームです。
    const renderInputForm = () => {
-	// Polygon Mumbai Testnet上にいない場合、switchボタンをレンダリングします。
-	if (network !== 'Polygon Mumbai testnet') {
+	
+	//Polygon Mumbai Testnet上にいない場合、switchボタンをレンダリングします。
+	if (network !== 'Polygon Mumbai Testnet') {
 		return (
 			<div className="connect-wallet-container">
 				{/* <p>Please connect to the Polygon Mumbai Testnet</p> */}
@@ -286,23 +286,23 @@ const fetchMints = async () => {
 				<button className='cta-button mint-button' onClick={switchNetwork}>Click here to switch</button>
 			</div>
 		);
-	}
+	} //else {
 	return (
 		<div className="form-container">
 			<div className="first-row">
 				<input
 				  type="text"
 				  value={domain}
-				  placeholder="domain"
+				  placeholder='domain'
 				  onChange={(e) => setDomain(e.target.value)}
 				/>
-				<p className="tld"> {tld} </p>
+				<p className='tld'> {tld} </p>
 			</div>
 
 			<input
 				type="text"
 				value={record}
-				placeholder="whats ur ninja power"
+				placeholder='whats ur horsepower?'
 				onChange={(e) => setRecord(e.target.value)}
 			/>
 			{/* editing 変数が true の場合、"Set record" と "Cancel" ボタンを表示します。 */}
@@ -343,7 +343,7 @@ const fetchMints = async () => {
 		</div>
 	);
    };
-
+   //};
 
    const renderMints = () => {
 	if (currentAccount && mints.length > 0) {
@@ -355,7 +355,7 @@ const fetchMints = async () => {
 						return (
 							<div className="mint-item" key={index}>
 							  <div className='mint-row'>
-								<a className="link" href={'https://testnets.opensea.io/assets/mumbai/${CONTRACT_ADDRESS}/${mint.id}'}target="blank" rel="noopener noreferrer">
+								<a className="link" href={'https://testnets.opensea.io/assets/mumbai/${CONTRACT_ADDRESS}/${mint.id}'}target="_blank" rel="noopener noreferrer">
 									<p className="underlined">{' '}{mint.name}{tld}{' '}</p>
 								</a>
 								 {/* mint.owner が currentAccount なら edit ボタンを追加します。 */}
@@ -376,9 +376,13 @@ const fetchMints = async () => {
 	}
    };
 
+{!currentAccount && renderNotConnectedContainer()}
+{currentAccount && renderInputForm()}
+{mints && renderMints()}
+
    // edit モードを設定します。
    const editRecord = (name) => {
-	console.log("Editing rcord for", name);
+	console.log("Editing record for", name);
 	setEditing(true);
 	setDomain(name);
    }
@@ -388,26 +392,26 @@ const fetchMints = async () => {
    useEffect(() => {
 	checkIfWalletIsConnected();
   
-   // currentAccount, network が変わるたびに実行されます。
+   // currentAccount, network が変わるたび実行されます。
    if (network === 'Polygon Mumbai Testnet') {
 	fetchMints();
    }
-// },[]);
-},[currentAccount, network]);
+   // },[]);
+   },[currentAccount, network]);
 
-  return (
+   return (
 		<div className="App">
 			<div className="container">
 				<div className="header-container">
 					<header>
             			<div className="left">
-             				 <p className="title">🐱‍👤 Ninja Name Service</p>
-             				 <p className="subtitle">Your API on the blockchain!</p>
+             				 <p className="title">🛫Airport Name Service</p>
+             				 <p className="subtitle">Your Airport on the blockchain!</p>
             			</div>
 						 {/* Display a logo and wallet connection status*/}
 						 <div className="right">
 							<img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
-							{ currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p> }
+							{ currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Clutch disengageed </p> }
 						 </div>
 					</header>
 				</div>
@@ -416,9 +420,12 @@ const fetchMints = async () => {
 				{!currentAccount && renderNotConnectedContainer()}
 				{/* アカウントが接続されるとインプットフォームをレンダリングします。 */}
 				{currentAccount && renderInputForm()}
+				{mints && renderMints()}
 
 				{/* render 関数をここに追加します */}
-				{/* {renderNotConnectedContainer()} */}
+				{renderNotConnectedContainer()} 
+
+				
 
         		<div className="footer-container">
 					<img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
