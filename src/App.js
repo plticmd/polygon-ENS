@@ -268,7 +268,8 @@ const fetchMints = async () => {
 			onClick={connectWallet}
 			className = "cta-button connect-wallet-button"
 		>
-			<p>Clutch Switch Engage🔜</p> Connect Wallet 
+			
+				Connect Wallet 
 		</button>
 	</div>
    );
@@ -411,7 +412,7 @@ const fetchMints = async () => {
 						 {/* Display a logo and wallet connection status*/}
 						 <div className="right">
 							<img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
-							{ currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Clutch disengageed </p> }
+							{ currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Wallet disConnected </p> }
 						 </div>
 					</header>
 				</div>
