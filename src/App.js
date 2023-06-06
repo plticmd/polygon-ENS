@@ -436,7 +436,7 @@ const fetchMints = async () => {
 						target="_blank"
 						rel="noreferrer"
 					>
-						{`built with @${TWITTER_HANDLE}`}
+						{`build by @${TWITTER_HANDLE}`}
 					</a>
 				</div>
 			</div>
