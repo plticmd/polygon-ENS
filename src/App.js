@@ -9,7 +9,7 @@ import ethLogo from './assets/ethlogo.png';
 import { networks } from './utils/networks';
 
 // Constants
-const TWITTER_HANDLE = 'voyager_cr';
+const TWITTER_HANDLE = 'LNomado';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const tld = ".Apt";
