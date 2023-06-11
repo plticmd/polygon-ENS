@@ -406,7 +406,7 @@ const fetchMints = async () => {
 				<div className="header-container">
 					<header>
             			<div className="left">
-             				 <p className="title">🛫Airport Name Service</p>
+             				 <p className="title">✈︎ Airport Name Service ✈︎</p>
              				 <p className="subtitle">Airport on the blockchain!</p>
             			</div>
 						 {/* Display a logo and wallet connection status*/}
