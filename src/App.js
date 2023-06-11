@@ -303,7 +303,7 @@ const fetchMints = async () => {
 			<input
 				type="text"
 				value={record}
-				placeholder='whats ur horsepower?'
+				placeholder='whats ur request?'
 				onChange={(e) => setRecord(e.target.value)}
 			/>
 			{/* editing 変数が true の場合、"Set record" と "Cancel" ボタンを表示します。 */}
