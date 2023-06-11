@@ -424,7 +424,7 @@ const fetchMints = async () => {
 				{mints && renderMints()}
 
 				{/* render 関数をここに追加します */}
-				{renderNotConnectedContainer()} 
+				{/*{renderNotConnectedContainer()} */}
 
 				
 
