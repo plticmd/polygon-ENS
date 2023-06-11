@@ -284,7 +284,7 @@ const fetchMints = async () => {
 				{/* <p>Please connect to the Polygon Mumbai Testnet</p> */}
 				<p>Please switch Polygon Mumbai Testnet</p>
 				{/* 今ボタンで switchNetwork 関数を呼び出します。 */}
-				<button className='cta-button mint-button' onClick={switchNetwork}>Click here to switch</button>
+				<button className='cta-button mint-button' onClick={switchNetwork}>Switch Mumbai</button>
 			</div>
 		);
 	} //else {
@@ -407,7 +407,7 @@ const fetchMints = async () => {
 					<header>
             			<div className="left">
              				 <p className="title">🛫Airport Name Service</p>
-             				 <p className="subtitle">Your Airport on the blockchain!</p>
+             				 <p className="subtitle">Airport on the blockchain!</p>
             			</div>
 						 {/* Display a logo and wallet connection status*/}
 						 <div className="right">
