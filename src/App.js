@@ -255,11 +255,13 @@ const fetchMints = async () => {
 	
 	<div className = "connect-wallet-container">
 		<img
-		  src = "https://media.giphy.com/media/yy6hXyy2DsM5W/giphy-downsized-large.gif"
+	          src="https://media.giphy.com/media/3oGRFg4wLLEgwA0Rkk/giphy.gif"
+              	  alt="Red bull gif"
+		  //src = "https://media.giphy.com/media/yy6hXyy2DsM5W/giphy-downsized-large.gif"
 		  //src = "https://media.giphy.com/media/1msxZUIsqN5pide6o5/giphy.gif" 
 		  //src = "https://media.giphy.com/media/iDJQRjTCenF7A4BRyU/giphy.gif"
 		  //src = "https://media.giphy.com/media/3ohhwytHcusSCXXOUg/giphy.gif"
-		  alt = "Ninja gif"
+		  
 		/>
 		{/* Connect Wallet ボタンが押されたときのみ connectWallet関数 を呼び出します。 */}
 		{/* <button className = "cta-button connect-wallet-button"> */}
