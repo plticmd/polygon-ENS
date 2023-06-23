@@ -14,7 +14,7 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const tld = ".Apt";
 //"YOUR_CONTRACT_ADDRESS_HERE"
-const CONTRACT_ADDRESS = "0x57BD9C3BE3e28d8084B7e462e69a611be117837E";
+const CONTRACT_ADDRESS = "0xD86f197F7355591482Ec3C246BbFd3b4c0cf18d0";
 
 const App = () => {
   //ユーザーのウォレットアドレスをstate管理しています。冒頭のuseStateのインポートを忘れないでください。
