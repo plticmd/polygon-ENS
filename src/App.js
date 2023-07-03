@@ -358,7 +358,7 @@ const fetchMints = async () => {
 						return (
 							<div className="mint-item" key={index}>
 							  <div className='mint-row'>
-								<a className="link" href={'https://testnets.opensea.io/assets/mumbai/${CONTRACT_ADDRESS}/${mint.id}'}target="_blank" rel="noopener noreferrer">
+								<a className="link" href={`https://testnets.opensea.io/assets/mumbai/${CONTRACT_ADDRESS}/${mint.id}`}target="_blank" rel="noopener noreferrer">
 									<p className="underlined">{' '}{mint.name}{tld}{' '}</p>
 								</a>
 								 {/* mint.owner が currentAccount なら edit ボタンを追加します。 */}
@@ -379,9 +379,9 @@ const fetchMints = async () => {
 	}
    };
 
-{!currentAccount && renderNotConnectedContainer()}
-{currentAccount && renderInputForm()}
-{mints && renderMints()}
+// {!currentAccount && renderNotConnectedContainer()}
+// {currentAccount && renderInputForm()}
+// {mints && renderMints()}
 
    // edit モードを設定します。
    const editRecord = (name) => {
